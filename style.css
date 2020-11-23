@@ -1,0 +1,1187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+
+/* styling the header */
+
+header{
+    margin-bottom: -5px;
+    background-image: url("https://images-na.ssl-images-amazon.com/images/I/71wJLcXGv4L._AC_SL1024_.jpg");
+    width: 100%;
+    height: 700px;
+    background-size: 100% 100%;
+}
+
+/* styling the nav */
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(185, 179, 179);
+    opacity: .7;
+}
+
+header nav i{
+    font-size: 35px;
+    background-color: rgb(185, 179, 179);
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+/* styling the left side */
+
+header nav button{
+    position: relative;
+    border: none;
+}
+
+header nav .change-btn{
+    display: none;
+}
+
+header nav .close{
+    display: none;
+}
+
+header nav ul{
+    display: none;
+    list-style-type: none;
+    width:150px;
+    opacity: 1;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 9px #888888;
+    border-collapse: separate;
+    border-radius: 0 5% 5% 0;
+}
+
+header nav ul li{
+    line-height: 25px;
+    padding: 5px 0 10px 10px;
+    margin: 6px;
+    color: white;;
+    font-size: 25px;
+    transition: all .5s ease-in-out;
+    animation: swing 1.5s ease-in-out; 
+} 
+
+header nav ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+header nav ul li:hover{
+    border-bottom: 1px solid rgb(189, 184, 164);
+    transform: scale(1.2);
+    opacity: .7;
+    text-indent: 10px;
+    cursor: pointer;
+}
+
+header nav button:hover{
+    transition: all .5s ease-in-out;
+}
+
+@keyframes swing{
+    0%{
+        transform: rotateX(-40deg)
+    }
+    20%{
+        transform: rotateX(40deg)
+    }
+    40%{
+        transform: rotateX(-30deg)
+    }
+    60%{
+        transform: rotateX(30deg)
+    }
+    80%{
+        transform: rotateX(-30deg)
+    }
+    100%{
+        transform: rotateX(0deg)
+    }
+}
+
+/* styling the right side */
+
+header nav .right-side{
+    display: flex;
+    flex-direction: row;
+}
+
+header nav .option{
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+header nav .home:hover, header nav .profile:hover, header nav .about:hover, header nav .info:hover{
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    transition: all .5s linear;
+    opacity: 1;
+}
+
+header nav .home:hover::after{
+    content: "Home";
+}
+
+header nav .profile:hover::after{
+    content: "profile";
+}
+
+header nav .about:hover::after{
+    content: "about";
+}
+
+header nav .info:hover::after{
+    content: "info";
+}
+
+/* styling the series section */
+
+#series-section{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+    opacity: .9;
+}
+
+#series-section img{
+    
+    width: 270px;
+    height: 175px;
+}
+
+#series-section p{
+    color: white;
+    text-align: justify;
+    -webkit-text-align-last: center;
+    text-align-last: center;
+    line-height: 30px;
+    font-style: oblique;
+    font-size: 20px;
+    padding: 0 120px 70px;
+}
+
+/* styling the actors section */
+
+#actors-section{
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    background-color: rgb(153, 126, 185);
+    height: 100%;
+    padding-bottom: 110px;
+}
+
+#actors-section h1, #seasons-section h1, #quotes-section h1, #relations-section h1, #café-section h1{
+    text-align: center;
+    color: rgb(243, 201, 17);
+    padding: 40px 0;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#actors-section .actors-container .first-row, section .actors-container .second-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    transition: all 1s ease-in-out;
+    position: relative;
+}
+
+#actors-section .actors-container .wrapper{
+    width: 300px;
+    height:400px;
+    padding: 9px;
+    margin: 10px 20px;
+    transition: all .5s ease-in-out;
+    text-align: center;
+    box-shadow: 8px 5px 10px #666161;
+    border-collapse: separate;
+    border: 30px solid transparent;
+    -webkit-border-image: url(https://images-na.ssl-images-amazon.com/images/I/41l1oh1a3PL._AC_SY400_.jpg) 25% round;
+    -moz-border-image: url(https://images-na.ssl-images-amazon.com/images/I/41l1oh1a3PL._AC_SY400_.jpg) 25% round;
+    border-image: url(https://images-na.ssl-images-amazon.com/images/I/41l1oh1a3PL._AC_SY400_.jpg) 25% round;
+    background-color: white;
+}
+
+#actors-section .actors-container .wrapper:hover{
+    box-shadow: -8px 5px 10px #666161;
+    border-collapse: separate;
+    border: 30px solid transparent;
+    border-radius: 5%;
+    transition: all 0.4s ease-in-out;
+}
+
+#actors-section .actors-container img{
+    border-radius: 50%;
+    margin-top: 17px;
+    width: 150px;
+    height: 150px; 
+}
+
+#actors-section .actors-container .wrapper img:hover{
+    border-radius: 35%;
+    transition: all 0.5s ease-in-out;
+}
+
+#actors-section .actors-container .wrapper p:hover{
+    opacity: .6;
+}
+
+#actors-section .wrapper p:nth-child(2){
+    font-size: 22px;
+    padding: 20px 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#actors-section .wrapper p:nth-child(3){
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* styling the seasons section */
+
+#seasons-section{
+    background-color:white;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+#seasons-section table{
+    text-align: center;
+    margin: 10px auto;
+    border: 1px solid rgb(163, 161, 161);
+}
+
+#seasons-section table th, td{
+    border: 1px solid rgb(163, 161, 161);
+    padding: 10px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#seasons-section table tr:nth-child(odd){
+    background-color: rgb(225, 226, 230);
+}
+
+#seasons-section table th{
+    color: rgb(153, 126, 185);
+    background-color: rgb(248, 240, 255);
+}
+
+#seasons-section table td{
+    color: rgb(61, 55, 55);
+}
+
+#seasons-section table td:first-child{
+    font-weight: bold;
+    color: rgb(104, 91, 91);
+}
+
+/* styling the quotes section */
+
+#quotes-section{
+    background-color:rgb(153, 126, 185);
+    -webkit-clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+    height: 100%;
+    padding-bottom: 150px;
+}
+
+#quotes-section h1{
+    padding-bottom: 50px;
+    padding-top: 150px;
+}
+
+#quotes-section .first-column, #quotes-section .second-column, #quotes-section .third-column{
+    display: flex;
+    flex-direction: column;
+}
+
+#quotes-section .first-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#quotes-section img{
+    width: 300px;
+    height: 250px;
+    padding: 2px;
+    border-radius: 5%;
+}
+
+.quotes-img img:nth-child(2){
+    display: none;
+}
+
+.quotes-img:hover img:first-child{
+    display: none;
+}
+
+.quotes-img:hover img:nth-child(2){
+    display: block;
+    -webkit-transform: scale( 1.1);
+    -moz-transform: scale( 1.1);
+    transform: scale( 1.1);
+}
+
+#quotes-section .second-column img{
+    height: 504px
+}
+
+#quotes-section .second-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#quotes-section .second-container img{
+    width: 450px;
+}
+
+/* styling the relations section */
+
+#relations-section{
+    padding-bottom: 25px;
+}
+
+#relations-section .relations-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#relations-section .first-column-relations, #relations-section .second-column-relations{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+#relations-section .main-wrapper{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+#relations-section .main-wrapper .front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+#relations-section .main-wrapper .front img{
+    width: 300px;
+    height: 300px;
+}
+
+#relations-section .main-wrapper .back{
+    width: 300px;
+    height: 300px;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    padding: 20px;
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;}
+
+#relations-section .main-wrapper .back ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+#relations-section .main-wrapper:hover{
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+#relations-section ul img{
+    width: 110px;
+    height: 110px;
+    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+/* styling the café section */
+
+#café-section{
+    background-color: rgb(153, 126, 185);
+    -webkit-clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+    height: 100%;
+    padding-bottom: 20px;
+}
+
+#café-section h1{
+    padding-top: 150px;
+}
+
+#café-section .café-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#café-section .café-container iframe{
+    width: 330px;
+    height: 355px;
+    border-radius: 3%;
+    margin: 0 20px;
+}
+
+#café-section .café-container p{
+    text-align: justify;
+    -webkit-text-align-last: center;
+    text-align-last: center;
+    line-height: 25px;
+    font-size: 18px;
+    width: 650px;
+    font-family: 'Syne Mono', monospace;
+    color: white;
+}
+
+/* styling the contact section */
+
+#contact-section{
+    padding: 20px 0 50px;
+    color: white;
+    background-image: linear-gradient(to right, rgb(24, 23, 23),#3a3939 )
+}
+
+#contact-section .contact-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#contact-section .contact-container h3{
+    padding: 20px 0;
+}
+
+#contact-section .contact-container .left-side iframe{
+    width: 600px;
+    height: 300px;
+}
+
+#contact-section .contact-container ul{
+    list-style-type: none;
+}
+
+#contact-section .contact-container .right-side ul:nth-child(2) li i{
+    color: rgb(153, 126, 185);
+    background-color: white;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+#contact-section .contact-container .right-side ul li span{
+   padding-left: 10px;
+}
+
+#contact-section .contact-container .right-side ul:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact-section .contact-container .right-side ul li{
+    padding: 5px;
+}
+
+#contact-section .contact-container .right-side ul li a i{
+    padding: 10px;
+    font-size: 35px;
+    color: white;
+}
+
+#contact-section .contact-container .right-side .social-media{
+    padding-top: 30px;
+}
+
+#contact-section .contact-container .right-side .social-media li:first-child:hover i{
+    color: #1E90FF;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#contact-section .contact-container .right-side .social-media li:nth-child(2):hover i{
+    color: #C71585;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#contact-section .contact-container .right-side .social-media li:nth-child(3):hover i{
+    color: #00BFFF;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#contact-section .contact-container .right-side .social-media li:nth-child(4):hover i{
+    color: #DC143C;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* styling the footer */
+
+footer{
+    background-color: rgb(158, 153, 153);
+    color: white;
+    height: 50px;
+    width: 100%;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 17px;
+}
+
+/*------------------------------------------------------*/
+
+/* Responsive design */
+
+
+/* styling between 320px and 480px */
+
+@media only screen and (min-width:320px) and (max-width:480px){
+
+    /* styling the header */
+
+    header{
+        height: 300px;
+    }
+
+    header nav{
+        padding: 8px 20px;
+    }
+
+    header nav ul{
+        width: 70px;
+        top: 38px;
+    }
+
+    header nav ul li{
+        font-size: 13px;
+        line-height: 3px;
+        padding: 5px 0 10px 1px;
+    }
+
+    header nav i{
+        font-size: 20px;
+        padding-top: 2px;
+    }
+
+    header nav ul li:hover{
+        transform: scale(1.1);
+        text-indent: 3px;
+    }
+
+    header nav .option{
+        padding: 0 15px;
+    }
+
+    /* styling the series section */
+
+    #series-section img{
+        width: 200px;
+        height: 100px;
+    }
+
+    #series-section p{
+        padding: 0 10px 30px;
+        line-height: 20px;
+        font-size: 12px;
+    }
+
+    /* styling the actors section */
+
+    #actors-section{
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 98%, 0% 100%);
+    }
+
+    #actors-section h1, #seasons-section h1, #quotes-section h1, #relations-section h1, #café-section h1{
+        font-size: 30px;
+    }
+
+    #actors-section .actors-container .first-row, section .actors-container .second-row{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #actors-section .actors-container .wrapper{
+        width: 290px;
+        height: 350px;
+    }
+
+    #actors-section .actors-container img{
+        margin-top: 12px;
+        width: 120px;
+        height: 120px; 
+    }
+
+    #actors-section .wrapper p:nth-child(2){
+        font-size: 20px;
+        padding: 11px 8px;
+    }
+    
+    #actors-section .wrapper p:nth-child(3){
+        font-size: 16px;
+        padding: 0 6px;
+    }
+
+    /* styling the seasons section */
+
+
+    #seasons-section{
+        padding-bottom: 50px;
+    }
+
+    #seasons-section table{
+        width: 98%;
+    }
+
+    #seasons-section table th, td{
+        padding: 2px;
+        font-size: 10px;
+    }
+
+    #seasons-section table th{
+        max-width: 50px;
+    }
+
+    /* styling the quotes section */
+
+    #quotes-section{
+        -webkit-clip-path: polygon(0 0, 100% 8%, 100% 96%, 0% 100%);
+        clip-path: polygon(0 0, 100% 2.5%, 100% 97.5%, 0% 100%);
+    }
+
+    #quotes-section h1{
+        padding-top: 100px;
+    }
+
+    #quotes-section .first-column, #quotes-section .second-column, #quotes-section .third-column{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #quotes-section .first-container{
+        flex-direction: column;
+    }
+
+    #quotes-section img{
+        width: 270px
+    }
+
+    #quotes-section .second-column img{
+       height: 250px;
+       width: 270px
+    }
+
+    #quotes-section .second-container img{
+        width: 270px
+    }
+
+    #quotes-section .second-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+     /* styling the relations section */
+
+     #relations-section .relations-container{
+        flex-direction: column;
+    }
+
+    #relations-section .first-column-relations, #relations-section .second-column-relations{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #relations-section .main-wrapper{
+        margin: 10px;
+    }
+
+    #relations-section .first-column-relations, #relations-section .second-column-relations{
+        padding: 0;
+    }
+
+    /* styling the café section */
+
+    #café-section{
+        -webkit-clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 7%, 100% 100%, 0% 100%);
+     }
+
+     #café-section h1{
+        padding-top: 80px;
+    }
+
+     #café-section .café-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #café-section .café-container iframe{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    #café-section .café-container p{
+        line-height: 15px;
+        font-size: 13px;
+        width: 100%;
+    }
+
+    /* styling the contact section */
+
+    #contact-section{
+        padding: 8px;
+    }
+
+    #contact-section .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-section .contact-container h3{
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    #contact-section .contact-container .left-side{
+        width: 100%;
+    }
+
+    #contact-section .contact-container .left-side iframe{
+        width: 100%;
+        padding: 20px;
+        height: 200px;
+    }
+
+    #contact-section .contact-container .right-side ul:nth-child(2) li i{
+        padding: 5px;
+    }
+
+    #contact-section .contact-container .right-side ul li{
+        padding: 2px;
+        text-align: center;
+    }
+
+     #contact-section .contact-container .right-side ul li a i{
+        padding: 8px;
+        font-size: 25px;
+    }
+
+    #contact-section .contact-container .right-side .social-media{
+        padding-top: 10px;
+    }
+
+    /* styling the footer */
+    
+    footer p{
+        font-size: 10px;
+    }
+
+}
+
+/* styling between 481px and 768px */
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+
+    /* styling the header */
+
+    header{
+        height: 500px;
+    }
+
+    header nav ul{
+        width: 90px;
+        top: 49px;
+    }
+
+    header nav ul li{
+        font-size: 15px;
+        line-height: 8px;
+        padding: 5px 0 10px 2px;
+    }
+
+    header nav i{
+        font-size: 27px;
+        padding-top: 2px;
+    }
+
+    /* styling the series section */
+
+    #series-section img{
+        width: 250px;
+        height: 140px;
+    }
+
+    #series-section p{
+        padding: 0 30px 60px;
+        line-height: 26px;
+        font-size: 16px;
+    }
+
+    /* styling the actors section */
+
+    #actors-section{
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
+    }
+
+    #actors-section .actors-container .first-row, section .actors-container .second-row{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    #actors-section .actors-container .wrapper{
+        width: 350px;
+        height: 400px;
+    }
+
+    #actors-section .wrapper p:nth-child(2){
+        font-size: 25px;
+        padding: 11px 8px;
+    }
+    
+    #actors-section .wrapper p:nth-child(3){
+        font-size: 19px;
+        padding: 0 9px;
+    }
+
+    /* styling the seasons section */
+
+    #seasons-section{
+        padding-bottom: 50px;
+    }
+
+    #seasons-section table th, td{
+        font-size: 18px;
+    }
+
+    #seasons-section h1{
+        padding-top: 30px;
+    }
+
+    #seasons-section table th, td{
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    /* styling the quotes section */
+
+    #quotes-section{
+        -webkit-clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%);
+        clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%);
+    }
+
+    #quotes-section h1{
+        padding-top: 100px;
+    }
+
+    #quotes-section .first-column, #quotes-section .second-column, #quotes-section .third-column{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #quotes-section .first-container{
+        flex-direction: column;
+    }
+
+    #quotes-section img{
+        width: 200px
+    }
+
+    #quotes-section .second-column img{
+       height: 250px;
+       width: 400px
+    }
+
+    #quotes-section .second-container img{
+        width: 200px
+    }
+
+    /* styling the relations section */
+
+    #relations-section h1{
+        padding-top: 30px;
+    }
+
+    #relations-section .relations-container{
+        flex-direction: column;
+    }
+
+    #relations-section .first-column-relations, #relations-section .second-column-relations{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #relations-section .main-wrapper{
+        margin: 10px;
+    }
+
+    #relations-section .first-column-relations, #relations-section .second-column-relations{
+        padding: 0;
+    }
+
+     /* styling the café section */
+
+     #café-section{
+        -webkit-clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%);
+     }
+
+     #café-section h1{
+        padding-top: 120px;
+    }
+
+     #café-section .café-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #café-section .café-container iframe{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    #café-section .café-container p{
+        line-height: 17px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    /* styling the contact section */
+
+    #contact-section{
+        padding: 10px;
+    }
+
+    #contact-section .contact-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-section .contact-container h3{
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    #contact-section .contact-container .left-side{
+        width: 100%;
+    }
+
+    #contact-section .contact-container .left-side iframe{
+        width: 100%;
+        padding: 20px;
+    }
+
+    #contact-section .contact-container .right-side ul li{
+        padding: 2px;
+        text-align: center;
+    }
+
+     #contact-section .contact-container .right-side ul li a i{
+        padding: 8px;
+        font-size: 30px;
+    }
+
+    #contact-section .contact-container .right-side .social-media{
+        padding-top: 20px;
+    }
+
+    /* styling the footer */
+    
+    footer p{
+        font-size: 14px;
+    }
+
+}
+
+/* styling between 769px and 1024px */
+
+
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+
+    /* styling the header */
+
+    header{
+        height: 600px;
+    }
+
+    header nav ul{
+        width: 120px;
+        top: 58px;
+    }
+
+    header nav ul li{
+        font-size: 20px;
+        line-height: 20px;
+        padding: 5px 0 10px 8px;
+    }
+
+    /* styling the series section */
+
+    #series-section p{
+        padding: 0 60px 60px;
+    }
+
+    /* styling the actors section */
+
+    #actors-section{
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 96%, 0% 100%);
+        padding-bottom: 100px;
+    }
+
+    #actors-section .actors-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #actors-section .actors-container .first-row, section .actors-container .second-row{
+        flex-direction: column;
+    }
+
+    #actors-section .actors-container .wrapper{
+        width: 300px;
+        height: 350px;
+    }
+
+    #actors-section .actors-container img{
+        margin-top: 5px;
+    }
+
+    #actors-section .wrapper p:nth-child(2){
+        font-size: 22px;
+        padding: 8px 8px;
+    }
+    
+    #actors-section .wrapper p:nth-child(3){
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    /* styling the seasons section */
+
+    #seasons-section{
+        padding-bottom: 50px;
+    }
+
+    #seasons-section table th, td{
+        font-size: 18px;
+    }
+
+    /* styling the quotes section */
+
+    #quotes-section{
+        -webkit-clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%);
+        clip-path: polygon(0 0, 100% 7%, 100% 95%, 0% 100%);
+    }
+
+    #quotes-section h1{
+        padding-top: 120px;
+    }
+
+    #quotes-section img{
+        width: 240px;
+        height: 250px;
+    }
+
+    #quotes-section .second-container img{
+        width: 362px;
+    }
+
+    /* styling the relations section */
+
+    #relations-section .relations-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #relations-section .first-column-relations, #relations-section .second-column-relations{
+        flex-direction: column;
+    }
+
+    #relations-section .main-wrapper{
+        margin: 10px;
+    }
+
+    /* styling the café section */
+
+    #café-section{
+        -webkit-clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
+     }
+
+     #café-section h1{
+         padding-top: 120px;
+     }
+
+    #café-section .café-container p{
+        line-height: 19px;
+        font-size: 15px;
+        width: 380px;
+    }
+
+    #café-section .café-container iframe{
+        width: 280px;
+        height: 370px;
+    }
+
+    /* styling the contact section */
+
+    #contact-section .contact-container .left-side iframe{
+        width: 400px;
+        height: 250px;
+    }
+
+}
+
+
+
+
+
+
+
+
